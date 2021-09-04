@@ -1,0 +1,92 @@
+.using {
+    padding-top: 120px;
+    &__title {
+        position: relative;
+        text-align: center;
+        @include before_circle;
+        &:before {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__subtitle {
+        text-align: center;
+    }
+
+    &__divider {
+        margin: 25px auto 0 auto;
+    }
+
+    &__wrapper {
+        padding: 60px 13px 0 13px;
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        grid-template-rows: repeat(2, 270px);
+        gap: 13px;
+
+        &-item {
+            padding: 30px 30px 25px 30px;
+            border: 1px solid #000000;
+            .item__title {
+                color: #000000;
+                font-weight: 700;
+                font-size: 14px;
+                margin-top: 20px;
+            }
+            .item__descr {
+                color: #000000;
+                font-weight: 500;
+                font-size: 12px;
+                margin-top: 15px;
+            }
+        }
+    }
+    .using__skills {
+        padding-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(2, 70px);
+        gap: 45px 30px;
+        &-item {
+            position: relative;
+            .item__title {
+
+                padding-left: 13px;
+                position: relative;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                left: 14px;
+                top: 8px;
+                @include before_circle;
+                &:before {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            .item__progress__percent {
+                position: absolute;
+                color: #000000;
+                font-weight: 700;
+                font-size: 14px;
+                right: 5px;
+                top: 8px;
+            }
+            .item__progress__bar {
+                width: 100%;
+                height: 14px;
+                border-radius: 4px;
+                background: #E8E4DE;
+                margin-top: 34px;
+            }
+            .item__progress__value {
+                height: 14px;
+                background: #FFA501;
+                border-radius: 4px;
+            }
+        }
+    }
+}
