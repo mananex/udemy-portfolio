@@ -38,20 +38,17 @@
                 border-radius: 100%;
             }
         }
-        ul {
-            list-style-type: none;
-            li {
-                position: relative;
-                &:after {
-                    content: '';
-                    width: 1px;
-                    height: calc(100% + 16px);
-                    position: absolute;
-                    top: -16px;
-                    left: 0;
-                    background: #000000;
-                }
-            }
+    }
+    &__item {
+        position: relative;
+        &:after {
+            content: '';
+            width: 1px;
+            height: calc(100% + 16px);
+            position: absolute;
+            top: -16px;
+            left: 0;
+            background: #000000;
         }
     }
     &__item {
