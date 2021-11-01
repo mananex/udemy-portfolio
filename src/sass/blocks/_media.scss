@@ -27,6 +27,52 @@
             grid-template-columns: repeat(1,425px);
         }
     }
+    .using {
+        &__wrapper {
+            grid-template-columns: repeat(2,270px);
+            display: flex;
+            flex-direction: column;
+        }
+        .using__skills {
+            padding-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &-item {
+                width: 84%;
+            }
+        }
+    }
+    .portfolio {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-auto-rows: 280px;
+            justify-content: center;
+            gap: 35px;
+            .horizontal, .vertical {
+                grid-row: unset;
+                grid-column: unset;
+            }
+        }
+    }
+    .price-list {
+        &__wrapper {
+            justify-content: center;
+            column-gap: 100px;
+            row-gap: 20px;
+        }
+    }
+    .contacts {
+        &__photo {
+            padding-right: 48px;
+        }
+        &__textarea {
+            width: 80%;
+        }
+        &__input {
+            width: 59%;
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -61,6 +107,18 @@
             grid-template-columns: repeat(2,350px);
         }
     }
+    .price-list {
+        &__wrapper {
+            justify-content: center;
+            grid-template-columns: repeat(auto-fit, 280px);
+            padding-top: 20px;
+        }
+    }
+    .contacts {
+        .contacts__photo {
+            display: none;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -79,7 +137,6 @@
         }
     }
     .about {
-        padding-top: 40px;
         &__wrapper {
             grid-template: 400px auto auto / 1fr;
         }
@@ -92,6 +149,9 @@
                 grid-template-columns: 40px 200px;
                 column-gap: 20px;
             }
+        }
+        &__descr {
+            padding-top: 395px;
         }
     }
     .resume {
@@ -111,6 +171,26 @@
         }
         .using__skills {
             grid-template-columns: repeat(2,255px);
+        }
+    }
+    .contacts {
+        &__wrapper {
+            padding: 0 10px 0 10px;
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+        }
+        &__form {
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+        &__input {
+            height: 45px;
+        }
+        &__textarea {
+            height: 143px;
         }
     }
 }
@@ -150,6 +230,9 @@
         &__skills {
             grid-template-columns: 1fr;
         }
+        &__descr {
+            padding-top: 415px;
+        }
     }
     .resume {
         &__wrapper {
@@ -183,5 +266,10 @@
                 width: 84%;
             }
         }
-    } 
+    }
+    .price-list {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 300px);
+        }
+    }
 }
